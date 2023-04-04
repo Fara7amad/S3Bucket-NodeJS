@@ -39,3 +39,20 @@ app.set('views', path.join(__dirname,('views')));
 ```
 
 - A link to the demo: [here](https://drive.google.com/file/d/1n6ybBQIUkZhHzCEGVdRjx_2EdieCmDR1/view?usp=share_link)
+
+- To deploy in an EC2 instance:
+<table><tr><td>
+1. Launch an EC2 instance ( Make sure to select an instance that meets the requirements for Node project).
+   
+2. Install Node.js.
+   
+3. Copy your project files to the instance. Make sure to copy your entire project directory, including the package.json file, or you can use git to clone it.
+   
+4. Install dependencies: Once you have copied your project files to the EC2 instance, navigate to the project directory and run npm install to install all the dependencies.
+   
+5. Set environment variables: You will need to set the environment variables, such as AWS access key and secret access key, AWS region, and bucket name. You can set these variables either in a .env file or using the command line.
+   
+6. Run the project: Once you have set the environment variables, you can start your Node project using the command `npm start` or `node app.js`. The application should now be running on the EC2 instance.
+   
+7. Configure security group: You need to configure the security group associated with your instance to allow traffic on the port your Node project is listening on.
+</td></tr></table>
